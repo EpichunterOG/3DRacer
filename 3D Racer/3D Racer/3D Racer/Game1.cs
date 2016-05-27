@@ -28,7 +28,7 @@ namespace _3D_Racer
         Song backgroundSong;
 
         KeyboardState kb,oldkb;
-        int width=800, height=600;
+        int width=800*3/2, height=600*3/2;
         int[,] map;
         int mapWidth, mapHeight;
 
@@ -1112,7 +1112,7 @@ namespace _3D_Racer
             Console.WriteLine(mapWidth);
             #endregion
             
-            cam = new Camera(new Vector2(2, 4), new Vector2(1, 0), new Vector2(0,-.66f), 20f, 2.5f);
+            cam = new Camera(new Vector2(2, 4), new Vector2(1, 0), new Vector2(0,-.66f), 5f, 2.5f);
             screen = new Screen(map, textures, width, height);
 
             font = Content.Load<SpriteFont>("font");

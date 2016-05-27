@@ -10,9 +10,10 @@ namespace _3D_Racer
 {
     class Camera
     {
-
+        public const float maxSpeed=20f;
+        public const float breakConst = 2f;
         public Vector2 pos;
-        public Vector2 speed;
+        public float speed;
         public Vector2 dir;
         public Vector2 plane;
         public float acceleration { get; set; }
@@ -29,7 +30,7 @@ namespace _3D_Racer
             this.plane = plane;
             this.acceleration = acceleration;
             this.rotation = rotation;
-            speed = new Vector2(0f, 0f);
+            speed = 0f;
 
         }
         public void update(int[,] map, GameTime time)
@@ -39,6 +40,28 @@ namespace _3D_Racer
             kb = Keyboard.GetState();
             ms = Mouse.GetState();
             #region keyboard
+
+            if (kb.IsKeyDown(Keys.D))
+            {
+                float oldxDir = dir.X;
+                dir.X = (float)(dir.X * Math.Cos(-rotation * dt * rAccr) - dir.Y * Math.Sin(-rotation * dt * rAccr));
+                dir.Y = (float)(oldxDir * Math.Sin(-rotation * dt * rAccr) + dir.Y * Math.Cos(-rotation * dt * rAccr));
+                float oldxPlane = plane.X;
+                plane.X = (float)(plane.X * Math.Cos(-rotation * dt * rAccr) - plane.Y * Math.Sin(-rotation * dt * rAccr));
+                plane.Y = (float)(oldxPlane * Math.Sin(-rotation * dt * rAccr) + plane.Y * Math.Cos(-rotation * dt * rAccr));
+            }
+            if (kb.IsKeyDown(Keys.A))
+            {
+
+                float oldxDir = dir.X;
+                dir.X = (float)(dir.X * Math.Cos(rotation * dt * rAccr) - dir.Y * Math.Sin(rotation * dt * rAccr));
+                dir.Y = (float)(oldxDir * Math.Sin(rotation * dt * rAccr) + dir.Y * Math.Cos(rotation * dt * rAccr));
+                float oldxPlane = plane.X;
+                plane.X = (float)(plane.X * Math.Cos(rotation * dt * rAccr) - plane.Y * Math.Sin(rotation * dt * rAccr));
+                plane.Y = (float)(oldxPlane * Math.Sin(rotation * dt * rAccr) + plane.Y * Math.Cos(rotation * dt * rAccr));
+
+            }
+
             /*
             if (kb.IsKeyDown(Keys.W))
             {
@@ -54,11 +77,10 @@ namespace _3D_Racer
              * */
             if (kb.IsKeyDown(Keys.W))
             {
+                if (speed <= maxSpeed)
+
+                    speed += acceleration * dt;
                 
-                    speed.X += dir.X * acceleration * dt;
-                
-               
-                    speed.Y += dir.Y * acceleration * dt;
                 
             }
             if(kb.IsKeyDown(Keys.L))
@@ -77,43 +99,54 @@ namespace _3D_Racer
                     pos.Y -= dir.Y * acceleration * dt;
                 }
             }*/
-
-            if (map[(int)(pos.X + speed.X), (int)pos.Y] == 0)
+            if (kb.IsKeyDown(Keys.S))
             {
-                pos.X += speed.X;
+                if (speed - ( breakConst * dt) >= 0f)
+                    speed -= breakConst * dt;
+                else if (speed - ( breakConst * dt) < 0f)
+                    speed = 0f;
+
+            }
+            int mapNumX = 0;
+            int mapNumY = 0;
+            //This code is outside of the IF statement to test for IndexOutOfRangeExceptions that would otherwise crash the program.
+
+            //These two are separate so that actions can be taken depending on which coordinate is throwing the IndexOutOfRangeException.
+            try
+            {
+                 mapNumX = map[(int)(pos.X + dir.X*speed * dt), (int)pos.Y];
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);
+                mapNumX = 1;
+            }
+            try
+            {
+                mapNumY = map[(int)(pos.X), (int)(pos.Y + dir.Y*speed * dt)];
+            }
+            catch (IndexOutOfRangeException e)
+            {
+                Console.WriteLine(e.Message);
+                mapNumY = 1;
+            }
+            if (mapNumX <= 0)
+            {
+                pos.X += dir.X*speed*dt;
             }
             else
             {
                 
             }
-            if (map[(int)(pos.X), (int)(pos.Y + speed.Y)] == 0)
+            if (mapNumY <= 0)
             {
-                pos.Y += speed.Y;
+                pos.Y += dir.Y*speed*dt;
             }
 
-            if (kb.IsKeyDown(Keys.D))
-            {
-                float oldxDir = dir.X;
-                dir.X = (float)(dir.X * Math.Cos(-rotation * dt*rAccr) - dir.Y * Math.Sin(-rotation * dt*rAccr));
-                dir.Y = (float)(oldxDir * Math.Sin(-rotation * dt*rAccr) + dir.Y * Math.Cos(-rotation * dt*rAccr));
-                float oldxPlane = plane.X;
-                plane.X = (float)(plane.X * Math.Cos(-rotation * dt*rAccr) - plane.Y * Math.Sin(-rotation * dt*rAccr));
-                plane.Y = (float)(oldxPlane * Math.Sin(-rotation * dt*rAccr) + plane.Y * Math.Cos(-rotation * dt*rAccr));
-            }
-            if (kb.IsKeyDown(Keys.A))
-            {
-
-                float oldxDir = dir.X;
-                dir.X = (float)(dir.X * Math.Cos(rotation * dt*rAccr) - dir.Y * Math.Sin(rotation * dt*rAccr));
-                dir.Y = (float)(oldxDir * Math.Sin(rotation * dt*rAccr) + dir.Y * Math.Cos(rotation * dt*rAccr));
-                float oldxPlane = plane.X;
-                plane.X = (float)(plane.X * Math.Cos(rotation * dt*rAccr) - plane.Y * Math.Sin(rotation * dt*rAccr));
-                plane.Y = (float)(oldxPlane * Math.Sin(rotation * dt*rAccr) + plane.Y * Math.Cos(rotation * dt*rAccr));
-
-            }
+           
             #endregion
             #region mouse
-            
+            /*
             if (ms.X != oldms.X)
             {
                 float dx = oldms.X - ms.X;
@@ -126,7 +159,7 @@ namespace _3D_Racer
                 plane.Y = (float)(oldxPlane * Math.Sin(rotation * dx * dt) + plane.Y * Math.Cos(rotation * dx * dt));
 
             }
-
+            */
             oldms = ms;
 
 
