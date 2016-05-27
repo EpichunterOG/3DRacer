@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>bluestone.png</Source>
+      <Name>bluestone</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\bluestone.xnb</Output>
+      <Time>2016-05-18T09:15:26.2842551-04:00</Time>
+    </Item>
+    <Item>
+      <Source>greystone.png</Source>
+      <Name>greystone</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\greystone.xnb</Output>
+      <Time>2016-05-18T09:15:26.2972512-04:00</Time>
+    </Item>
+    <Item>
+      <Source>redbrick.png</Source>
+      <Name>redbrick</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\redbrick.xnb</Output>
+      <Time>2016-05-18T09:15:26.3092481-04:00</Time>
+    </Item>
+    <Item>
+      <Source>wood.png</Source>
+      <Name>wood</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\wood.xnb</Output>
+      <Time>2016-05-18T09:15:26.2702584-04:00</Time>
+    </Item>
+    <Item>
+      <Source>font.spritefont</Source>
+      <Name>font</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\font.xnb</Output>
+      <Time>2016-05-18T09:15:43.8137714-04:00</Time>
+    </Item>
+    <Item>
+      <Source>wall.png</Source>
+      <Name>wall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\wall.xnb</Output>
+      <Time>2016-05-19T09:21:35.7507404-04:00</Time>
+    </Item>
+    <Item>
+      <Source>phoon.mp3</Source>
+      <Name>phoon</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\phoon.xnb</Output>
+      <Extra>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\phoon.wma</Extra>
+      <Time>2016-05-25T14:03:34.0330457-04:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D RacerContent\</RootDirectory>
+      <LoggerRootDirectory>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\</LoggerRootDirectory>
+      <IntermediateDirectory>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D RacerContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-04:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2015-09-14T12:49:26.8162151-04:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

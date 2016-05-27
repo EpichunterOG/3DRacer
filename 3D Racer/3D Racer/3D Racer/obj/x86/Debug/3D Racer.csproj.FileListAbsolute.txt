@@ -1,0 +1,14 @@
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\bluestone.xnb
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\greystone.xnb
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\redbrick.xnb
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\wood.xnb
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\3D Racer.exe
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\3D Racer.pdb
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\obj\x86\Debug\3D Racer.exe
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\obj\x86\Debug\3D Racer.pdb
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\font.xnb
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\obj\x86\Debug\3D Racer.csprojResolveAssemblyReference.cache
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\wall.xnb
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\phoon.xnb
+\\bc406-data\stuhome\304682\documents\visual studio 2010\Projects\3D Racer\3D Racer\3D Racer\bin\x86\Debug\Content\phoon.wma
