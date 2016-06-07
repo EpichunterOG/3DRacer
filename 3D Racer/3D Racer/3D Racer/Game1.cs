@@ -40,7 +40,8 @@ namespace _3D_Racer
 
         Camera cam;
         Screen screen;
-
+        Title title;
+        
         //debugging vars
         bool debugging = true;
         float fps;
@@ -72,7 +73,7 @@ namespace _3D_Racer
             textures.Add(Content.Load<Texture2D>("redbrick"));
             textures.Add(Content.Load<Texture2D>("bluestone"));
             textures.Add(Content.Load<Texture2D>("greystone"));
-
+            this.IsMouseVisible = true;
           
 
             #region map
@@ -1138,7 +1139,9 @@ namespace _3D_Racer
             //desplayImage.GetData<Color>(0, null, pix, 0, pix.Length);
             screen.update(cam, pix);
             desplayImage.SetData(pix);
-            
+            Texture2D titleTexture = Content.Load<Texture2D>("patrick");
+            Texture2D blank = Content.Load<Texture2D>("blank");
+            title = new Title(titleTexture, blank, font, width, height);
         }
 
         /// <summary>
@@ -1160,7 +1163,7 @@ namespace _3D_Racer
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+            MouseState ms = Mouse.GetState();
             
             //get the fps
             if (gameTime.ElapsedGameTime.Milliseconds != 0)
@@ -1176,7 +1179,11 @@ namespace _3D_Racer
             {
 
             }
-            
+            else if (state == GameState.Menu)
+            {
+                title.Mouse = ms;
+                state = title.play ? GameState.Play : GameState.Menu;
+            }
            
           //  desplayImage.SetData(0, null, pix, 0, pix.Length);
             
@@ -1205,6 +1212,10 @@ namespace _3D_Racer
             if (state == GameState.Pause)
             {
 
+            }
+            if (state == GameState.Menu)
+            {
+                title.DrawTitle(spriteBatch);
             }
             if (debugging)
             {
